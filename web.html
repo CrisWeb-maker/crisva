@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development (Beginner)</title>
+    <link rel="stylesheet" href="index.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <img src="./Picture/header-bg-color.png" alt="" class="w-full">
+    </div>
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+        <img src="./Picture/Logo.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 dark:hidden">
+        
+        <img src="./Picture/logo_dark.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 hidden dark:block">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="index.html#top">Home</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#work">My Work</a></li>
+            <li><a href="index.html#contact">Contact Me</a></li>
+        </ul>
+
+        <div class="flex item-center gap-4">
+        <button onclick="toggleTheme()">
+            <img src="./Picture/Moon icon.png" alt="" class="w-7 dark:hidden">
+            <img src="./Picture/sun_icon.png" alt="" class="w-7 hidden dark:block">
+        </button>
+        <a href="#contact"
+        class="hidden lg:flex item-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50">
+        Contact 
+        <img src="./Picture/arrow icon.png" alt="" class="w-6 dark:hidden"> 
+        <img src="./Picture/arrow-icon-dark.png" alt="" class="w-6 hidden dark:block">
+    </a>
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="./Picture/menu-black.png" alt="" class="w-6 dark:hidden">
+            <img src="./Picture/menu-white.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        </div>
+
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transation duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+            
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./Picture/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+                <img src="./Picture/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Me</a></li>
+        </ul>
+
+        
+    </nav>
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img src="./Picture/wds.png" alt="" class="rounded-full w-32">
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Web Development (Beginner)</h1>
+        <p class="max-w-2xl mx-auto font-Ovo">I’m starting my journey in web development with a focus on front-end like HTML, CSS, and JavaScript. I can assist with basic website updates and maintenance. I’m eager to learn and grow with each project.</p>
+    </div>
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h2 class="text-center text-5xl font-Ovo">Services Offered</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">“I am beginning my journey in web development, focusing on front-end technologies like HTML, CSS, and JavaScript. My passion for creating user-friendly and visually appealing websites drives me to continuously learn and improve my skills.</p>
+    
+        <div class="grid grid-cols-auto gap-6 my-10">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointerhover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./Picture/shop.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Basic Website Updates</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I can assist with updating content, images, and layouts on existing websites to keep them fresh and relevant.</p>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointerhover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./Picture/plc.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">HTML/CSS</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I can make simple website designs using HTML and CSS.</p>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointerhover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./Picture/seo.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">JavaScript Basics</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I am learning JavaScript and can implement basic scripts to add interactivity to web pages.</p>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointerhover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./Picture/cs.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Responsive Design</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I strive to create mobile-friendly designs that ensure a seamless experience across devices.</p>
+            </div>
+        </div>
+    </div>
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h2 class="text-center text-5xl font-Ovo">Tools Proficiency</h2>
+    
+        <div class="grid grid-cols-auto gap-6 my-10">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointerhover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./Picture/vscode.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">VS Code</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">I use Visual Studio Code for coding and editing web pages.</p>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointerhover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./Picture/Canva.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Canva</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Skilled in using Canva for designing visual content.</p>
+            </div>
+        </div>
+    </div>
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h2 class="text-center text-5xl font-Ovo">Learning Journey</h2>
+    
+        <div class="grid grid-cols-auto gap-6 my-10">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointerhover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white text-center">I am currently taking online courses and working on personal projects to build my skills in web development. I’m eager to collaborate on projects where I can contribute and learn simultaneously.</h3>
+            </div>
+        </div>
+    </div>
+ 
+<div class="mt-20">
+    <div class="text-center">
+        <img src="./Picture/logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+        <img src="./Picture/logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+        <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="./Picture/mail_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./Picture/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+            crispa2206@gmail.com
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p>© 2024 Cristylen M. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a href="https://www.instagram.com/?hl=en" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/?hl=en" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/?hl=en" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/?hl=en" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+</div>
+    
+<script src="./script.js"></script>
+</body>
+</html>
